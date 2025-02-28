@@ -1,27 +1,31 @@
-# OnlineShop
+# Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.9.
+A full-stack e-commerce platform built with Angular (frontend), Express.js (backend), and MongoDB (database). The database runs inside a Docker container for easy deployment and scalability. The platform includes user authentication, product management, and a seamless shopping experience.
 
-## Development server
+## Technologies Used
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Angular, Express js, MongoDB, Docker
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Home Page
 
-## Build
+<img width="1512" alt="Screenshot 2025-02-28 at 5 29 22 PM" src="https://github.com/user-attachments/assets/aecd6d62-b007-402f-af96-44959033f5ab" />
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Sign In/Out Page
 
-## Running unit tests
+<img width="1512" alt="Screenshot 2025-02-28 at 5 28 30 PM" src="https://github.com/user-attachments/assets/1d9305eb-26da-409e-9750-513a94f339f3" />
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Management Page
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<img width="1512" alt="Screenshot 2025-02-28 at 5 29 33 PM" src="https://github.com/user-attachments/assets/4dc38223-8750-4be3-84d4-ffe89b6df192" />
+<br></br>
+<img width="1512" alt="Screenshot 2025-02-28 at 5 29 38 PM" src="https://github.com/user-attachments/assets/8ecbfe9b-41cb-498c-82dd-c61c1ca01b6b" />
 
-## Further help
+## Dashboard Page
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<img width="1512" alt="Screenshot 2025-02-28 at 5 29 48 PM" src="https://github.com/user-attachments/assets/9282bec3-ccf7-4c2a-9ba2-5e5cda957935" />
+
+## Shop Page
+
+<img width="1512" alt="Screenshot 2025-02-28 at 5 29 56 PM" src="https://github.com/user-attachments/assets/b2a45efd-4e11-495d-b172-860c4bc5617e" />
