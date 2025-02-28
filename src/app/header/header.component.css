@@ -1,0 +1,22 @@
+.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+.navbar a.selected {
+  text-decoration: underline; /* Underline for active link */
+}

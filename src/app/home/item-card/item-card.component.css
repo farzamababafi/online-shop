@@ -1,0 +1,90 @@
+.card {
+  width: 250px;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.image-container {
+  position: relative;
+}
+.card:hover .status,
+.card:hover .category {
+  opacity: 1;
+}
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.status {
+  position: absolute;
+  top: 10px; /* Adjust based on your design */
+  left: 10px; /* Adjust based on your design */
+  background-color: rgba(255, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  opacity: 0;
+}
+
+.category {
+  position: absolute;
+  top: 40px; /* Position it below the status */
+  left: 10px;
+  background-color: rgba(0, 0, 255, 0.7);
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  opacity: 0;
+}
+.status-container {
+  display: flex;
+  flex-direction: column;
+}
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333333;
+}
+
+.card-price {
+  font-size: 1.1rem;
+  color: #666666;
+  margin: 5px 0;
+}
+
+.card-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Hover effect to show category */
+.image-container:hover .category {
+  display: block; /* Show category on hover */
+}

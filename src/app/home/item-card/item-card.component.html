@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-image">
+    <img
+      [src]="imageUrl"
+      [alt]="item()?.name"
+      class="card-img"
+      [routerLink]="'/commodity/' + item()?._id"
+    />
+    <div class="status-container">
+      <span class="status">{{ item()?.inventoryStatus }}</span>
+
+      <span class="category">{{ item()?.category }}</span>
+    </div>
+  </div>
+  <div class="card-content">
+    <h2 class="card-title">{{ item()?.name }}</h2>
+
+    <p class="card-price">${{ item()?.price }}</p>
+
+    <button class="card-btn">Purchase</button>
+  </div>
+</div>

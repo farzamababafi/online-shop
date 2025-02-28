@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="header">
+    <input
+      type="text"
+      placeholder="Search..."
+      [(ngModel)]="searchTerm"
+      class="search-bar"
+    />
+    <button (click)="showForm()" class="add-button">Add New</button>
+  </div>
+
+  <p-table
+    [value]="filterData()"
+    [paginator]="true"
+    [rows]="8"
+    [sortField]="'name'"
+    [sortMode]="'single'"
+  >
+    <!-- Table Headers with Sorting -->
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="name">
+          Name <p-sortIcon field="name"></p-sortIcon>
+        </th>
+        <th pSortableColumn="category">
+          Category <p-sortIcon field="category"></p-sortIcon>
+        </th>
+        <th pSortableColumn="inventoryStatus">
+          Inventory Status <p-sortIcon field="inventoryStatus"></p-sortIcon>
+        </th>
+        <th pSortableColumn="price">
+          Price <p-sortIcon field="price"></p-sortIcon>
+        </th>
+        <th pSortableColumn="quantity">
+          Quantity <p-sortIcon field="quantity"></p-sortIcon>
+        </th>
+        <th>Actions</th>
+      </tr>
+    </ng-template>
+
+    <!-- Table Body -->
+    <ng-template pTemplate="body" let-commodity>
+      <tr>
+        <td>{{ commodity.name }}</td>
+        <td>{{ commodity.category }}</td>
+        <td>{{ commodity.inventoryStatus }}</td>
+        <td>{{ commodity.price | currency }}</td>
+        <td>{{ commodity.quantity }}</td>
+        <td>
+          <!--<button (click)="editCommodity(commodity)" class="action-button edit">
+            Edit
+          </button>
+          -->
+          <button
+            (click)="deleteCommodity(commodity._id)"
+            class="action-button delete"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  @if(isFormShow()){
+  <app-form (closeForm)="closeForm($event)" />
+  }
+</div>

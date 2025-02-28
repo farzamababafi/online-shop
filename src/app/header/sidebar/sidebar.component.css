@@ -1,0 +1,115 @@
+/* Basic Button Style */
+.menu-button {
+  background-color: #007bff; /* Primary color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  padding: 0.8rem 1.2rem; /* Padding for a better click area */
+  font-size: 1rem; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.1s ease, background-color 0.3s ease;
+}
+button:active {
+  transform: scale(0.95); /* Shrinks the button a bit */
+}
+/* Hover Effect */
+.menu-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Disabled Button Style */
+.menu-button:disabled {
+  background-color: #cccccc; /* Grey color for disabled buttons */
+  cursor: not-allowed; /* Disabled cursor */
+}
+/* Menu Icon Button Style */
+.menu-icon {
+  background-color: transparent; /* No background for the button */
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Lines in the Menu Icon */
+.menu-icon div {
+  width: 100%;
+  height: 3px;
+  background-color: #fff; /* Menu lines color */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for the Icon */
+.menu-icon:hover div {
+  background-color: #007bff;
+}
+
+/* Pop-in Effect when Clicking the Icon */
+.menu-icon:active {
+  transform: scale(0.95); /* Slightly shrink the button on click */
+}
+.sidebar-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 5vh;
+}
+.sidebar-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar-logo {
+  cursor: pointer;
+}
+.sidebar-body .option-container,
+.sidebar-body .log-container {
+  padding: 1rem;
+  width: 100%;
+}
+.sidebar-body .option-container ul,
+.sidebar-body .log-container ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.sidebar-body .log-container ul {
+  align-items: center;
+}
+.sidebar-body .option-container ul li,
+.sidebar-body .log-container ul li {
+  list-style: none;
+}
+.sidebar-body .option-container ul li a,
+.sidebar-body .log-container ul li a {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sidebar-body .option-container ul li a:hover,
+.sidebar-body .log-container ul li a:hover,
+.sidebar-body .option-container ul li a.selected,
+.sidebar-body .log-container ul li a.selected {
+  color: #0056b3; /* Change text color on hover */
+  border-bottom: 2px solid #007bff; /* Show border color on hover */
+}
+.sidebar-body .option-container ul li a span,
+.sidebar-body .log-container ul li a span {
+  margin-left: 1rem;
+}

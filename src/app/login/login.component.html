@@ -1,0 +1,74 @@
+<div [class.active]="isSignup()" class="body">
+  <div class="container">
+    <div class="bluebg">
+      <div class="box signin">
+        <h2>Already Have An Account ?</h2>
+        <button (click)="pageToggle(false)" class="signinbtn">Sign in</button>
+      </div>
+      <div class="box signup">
+        <h2>Dont Have An Account ?</h2>
+        <button (click)="pageToggle(true)" class="signupbtn">Sign up</button>
+      </div>
+    </div>
+    <div [class.active]="isSignup()" class="formbx">
+      <div class="form signinform">
+        <form [formGroup]="formLogin" (ngSubmit)="onLogInSubmit()">
+          <h3>Sign in</h3>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            formControlName="username"
+            placeholder="Username"
+          />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            formControlName="password"
+            placeholder="Password"
+          />
+          <input type="submit" value="login" />
+          <a href="#" class="forgot">Forgot Password</a>
+        </form>
+      </div>
+
+      <div class="form signupform">
+        <form [formGroup]="formSignup" (ngSubmit)="onSignUpSubmit()">
+          <h3>Sign up</h3>
+          <input
+            id="signUpUsername"
+            name="username"
+            formControlName="username"
+            type="text"
+            placeholder="Username"
+          />
+          <input
+            id="email"
+            name="email"
+            formControlName="email"
+            type="text"
+            placeholder="Email Address"
+          />
+          <div formGroupName="passwords">
+            <input
+              id="signUpPassword"
+              type="password"
+              name="password"
+              formControlName="password"
+              placeholder="Password"
+            />
+            <input
+              id="confirm-password"
+              type="password"
+              name="confirm-password"
+              formControlName="confirmPassword"
+              placeholder="Confirm Password"
+            />
+          </div>
+          <input type="submit" value="Register" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

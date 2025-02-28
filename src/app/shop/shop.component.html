@@ -1,0 +1,45 @@
+<div class="shop-container">
+  <div class="shop-header">
+    <div class="filter-section">
+      <!-- Brand Filter -->
+
+      <!-- Category Filter -->
+      <select [(ngModel)]="selectedCategory" (change)="filterItems()">
+        <option value="">All Categories</option>
+        @for(category of categories() ; track $index) {
+        <option [value]="category">
+          {{ category }}
+        </option>
+        }
+      </select>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search"
+        [(ngModel)]="searchQuery"
+        (input)="filterItems()"
+      />
+    </div>
+
+    <!-- Paginator -->
+    <div class="paginator-container">
+      <p-paginator
+        (onPageChange)="onPageChange($event)"
+        [first]="first"
+        [rows]="rows"
+        [totalRecords]="items().length"
+        [showFirstLastIcon]="false"
+      ></p-paginator>
+    </div>
+  </div>
+
+  <!-- Item List -->
+  <div class="item-container">
+    @for (item of filteredItems(); track $index) {
+    <app-item-card [item]="item"></app-item-card>
+    }
+  </div>
+</div>

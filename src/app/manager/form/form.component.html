@@ -1,0 +1,95 @@
+<div (click)="onClose()" class="form-container">
+  <form
+    (click)="onFormClick($event)"
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+  >
+    <div (click)="onClose()" class="form-actions">
+      <p class="exit-button">Exit</p>
+    </div>
+
+    <div class="control">
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" formControlName="productName" />
+    </div>
+
+    <hr />
+
+    <div>
+      <div class="control-row">
+        <div class="control">
+          <label for="category">Category</label>
+          <input
+            type="text"
+            id="category"
+            name="category"
+            formControlName="category"
+          />
+        </div>
+
+        <div class="control">
+          <label for="brand">Brand</label>
+          <input type="text" id="brand" name="brand" formControlName="brand" />
+        </div>
+      </div>
+      <hr />
+      <div class="control-row">
+        <div class="control">
+          <label for="quantity">Quantity</label>
+          <input
+            type="text"
+            id="quantity"
+            name="quantity"
+            formControlName="quantity"
+          />
+        </div>
+
+        <div class="control">
+          <label for="price">Price</label>
+          <input type="text" id="price" name="price" formControlName="price" />
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="control-row">
+      <div class="control">
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          name="description"
+          formControlName="description"
+          wrap="physical"
+        ></textarea>
+      </div>
+    </div>
+    <hr />
+
+    <div class="control-row">
+      <div class="control">
+        <label class="button" for="uploadBtn">Upload File</label>
+        <input
+          (change)="onFileSelected($event)"
+          type="file"
+          id="uploadBtn"
+          name="uploadBtn"
+          formControlName="image"
+        />
+        @if(form.value.image ){
+        <p class="control-error">{{ form.value.image }}</p>
+        }
+      </div>
+    </div>
+
+    <p class="form-actions">
+      <button type="reset" class="button button-flat" (click)="onReset()">
+        Reset
+      </button>
+      <button type="submit" class="button">Submit</button>
+    </p>
+    @if(form.invalid && form.dirty && form.touched ){
+    <p class="control-error">Invalid form</p>
+    }
+  </form>
+</div>

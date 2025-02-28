@@ -1,0 +1,43 @@
+footer {
+  background-color: #282c34; /* Dark background color */
+  color: #ffffff; /* Text color */
+  padding: 1rem; /* Padding around the footer */
+  text-align: center; /* Center align the text */
+  position: relative; /* Positioning context for absolute positioning */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+}
+
+.footer-content {
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Center align content */
+}
+.footer-content p {
+  margin: 1rem;
+}
+.footer-content nav {
+  margin: 1rem;
+}
+footer nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  flex-wrap: wrap;
+}
+
+footer nav ul li {
+  display: inline; /* Inline items */
+  margin: 1rem; /* Space between items */
+}
+
+footer nav ul li a {
+  color: #ffffff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+footer nav ul li a:hover {
+  color: #61dafb; /* Color change on hover */
+}

@@ -1,0 +1,19 @@
+.dashboard-container {
+  padding: 1rem;
+  min-height: 95vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.dashboard-container div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard-container div h1 {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+}

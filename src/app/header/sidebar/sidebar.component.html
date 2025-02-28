@@ -1,0 +1,79 @@
+<p-sidebar [(visible)]="sidebarVisible" styleClass="w-100%">
+  <ng-template pTemplate="headless">
+    <div class="sidebar-container">
+      <div class="sidebar-header">
+        <div class="sidebar-logo" routerLink="/home" (click)="onClose()">
+          <h1>Hi</h1>
+        </div>
+        <p-button
+          type="button"
+          (click)="onClose()"
+          icon="pi pi-times"
+          rounded="true"
+          outlined="true"
+        ></p-button>
+      </div>
+      <div class="sidebar-body">
+        <div class="option-container">
+          <ul>
+            <li>
+              <a
+                routerLinkActive="selected"
+                (click)="onClose()"
+                routerLink="/shop"
+              >
+                <i class="pi pi-folder mr-2"></i>
+                <span class="font-medium">Shop</span>
+              </a>
+            </li>
+            @if(isSignedIn()){
+            <li>
+              <a
+                routerLinkActive="selected"
+                (click)="onClose()"
+                routerLink="/dashboard"
+              >
+                <i class="pi pi-chart-bar mr-2"></i>
+                <span class="font-medium">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a
+                routerLinkActive="selected"
+                (click)="onClose()"
+                routerLink="/manager"
+              >
+                <i class="pi pi-cog mr-2"></i>
+                <span class="font-medium">Manager</span>
+              </a>
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="log-container">
+          <ul>
+            <li>
+              <a
+                routerLinkActive="selected"
+                (click)="onClose()"
+                routerLink="/login"
+              >
+                <i class="pi pi-folder mr-2"></i>
+                <span class="font-medium">{{
+                  isSignedIn() ? "Log Out" : "Log in"
+                }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-sidebar>
+<button class="menu-button" (click)="onClick()">
+  <button class="menu-icon">
+    <div></div>
+    <div></div>
+    <div></div>
+  </button>
+</button>

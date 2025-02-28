@@ -1,0 +1,19 @@
+<div class="product-container">
+  @if(isLoading()){
+  <app-loading />
+  } @else {
+  <img [src]="imageUrl" [alt]="userData().name" class="product-image" />
+  <div class="product-details">
+    <h1 id="name">{{ userData().name }}</h1>
+    <p id="description">
+      {{ userData().description }}
+    </p>
+    <p id="price">Price: ${{ userData().price }}</p>
+    <p id="quantity">Quantity: {{ userData().quantity }}</p>
+    <p id="inventoryStatus" class="in-stock">
+      {{ userData().inventoryStatus }}
+    </p>
+    <p id="category">Category: {{ userData().category }}</p>
+  </div>
+  }
+</div>

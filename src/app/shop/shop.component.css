@@ -1,0 +1,71 @@
+.shop-container {
+  width: 100%;
+  min-height: 95vh;
+  padding: 1rem;
+}
+.shop-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+.paginator-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  min-width: 15rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.filter-section {
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section select {
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-container {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns */
+  gap: 1rem; /* Spacing between cards */
+  justify-items: center;
+  align-items: center;
+}
+@media (width<1100px) {
+  .item-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (width<850px) {
+  .item-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width<590px) {
+  .item-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .shop-container {
+    padding: 0;
+    padding-top: 0.5rem;
+  }
+}

@@ -1,0 +1,19 @@
+<nav class="navbar">
+  @if(showSidebar()){
+  <app-sidebar />
+  } @else {
+  <div class="navbar-container">
+    <a routerLinkActive="selected" routerLink="/shop">Shop</a>
+    @if(isSignedIn()){
+
+    <a routerLinkActive="selected" routerLink="/dashboard">Dashboeard</a>
+    <a routerLinkActive="selected" routerLink="/manager">Manager</a>
+    }
+    <a (click)="onLogOut()" routerLinkActive="selected" routerLink="/login">{{
+      isSignedIn() ? "Log Out" : "Log in"
+    }}</a>
+  </div>
+  }
+
+  <div class="image-container" routerLink="/home"><a>home</a></div>
+</nav>
